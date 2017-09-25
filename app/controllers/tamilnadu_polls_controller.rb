@@ -6,8 +6,7 @@ class TamilnaduPollsController < ApplicationController
 
 	def create
 		@tamilnadu_poll = TamilnaduPoll.new(create_params)
-		
-		ip = remote_ip()
+		ip = request.env['REMOTE_ADDR']
 		@tamilnadu_poll.update(ip: ip)
 
 		if @tamilnadu_poll.save
