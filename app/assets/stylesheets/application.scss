@@ -15,3 +15,55 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+body{
+	background-image: url(madras_blur.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+  height: 100%;
+}
+
+.title {
+    font-size: 70px;
+    color: #fff;
+    font-family: 'Concert One', serif;
+    padding-left: 20px;
+}
+.sub-title, .text {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Ruda', serif;
+    padding-left: 20px;
+}
+.timer {
+  padding: 10px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.timer .timer-wrapper {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+.timer .timer-wrapper .time {
+  font-weight: bold;
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Ruda', serif;
+}
+
+.timer .timer-wrapper .text {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Ruda', serif;
+}
+.left-div {
+    text-align: left;
+    margin-top: 175px;
+}
