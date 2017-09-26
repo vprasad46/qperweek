@@ -11,28 +11,3 @@
 	<div class = "col-md-6">
 	</div>
 </div>
-
-
-<%= flash[:danger] %>
-<%= flash[:success] %>
-
-<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
-		<p> Choose the candidate you would vote in TAMILNADU Elections-2017</p>
-		<%= f.radio_button :choice, 'kamal'%> Kamal Hassan<br/>
-		<%= f.radio_button :choice, 'rajini'%>RajiniKanth<br/>
-		<%= f.radio_button :choice, 'dmk'%> DMK <br/>
-		<%= f.radio_button :choice, 'aiadmk'%> AIADMK <br/>
-		<%= f.radio_button :choice, 'pmk'%> PMK <br/>
-		<%= f.radio_button :choice, 'dmdk'%> DMDK <br/>
-		<%= f.radio_button :choice, 'other'%> Others <br/>
-		<p> Can you vote in the upcoming election? </p>
-		<%= f.radio_button :voter, 'adult'%> Voter<br/>
-		<%= f.radio_button :voter, 'child'%> Non-Voter<br/>
-		<p> Enter you email id</p>
-		<%= f.email_field :email%>
-	 <%= f.submit%>
-<% end %>
-
-
-
-

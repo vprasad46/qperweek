@@ -16,7 +16,11 @@ class TamilnaduPollsController < ApplicationController
 			flash[:danger] = @tamilnadu_poll.errors.full_messages
 			redirect_to(tamilnadu_polls_index_path)
 		end
-		
+	end
+
+	def deadline
+		deadline = Deadline.find(1).endtime
+		render json:{deadline: deadline}
 	end
 
 	private 
