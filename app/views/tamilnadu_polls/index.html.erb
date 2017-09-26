@@ -8,6 +8,57 @@
 	<div class = "col-md-6 left-div">
 		<div class = "timer" id="countdown"></div>		
 	</div>
-	<div class = "col-md-6">
-	</div>
+	<div class = "col-md-6 right-div">
+		<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
+			<div class = "question-space">
+				<p>Who would you vote for in the Upcoming Election?</p>
+				<div class = "row">
+				<input type="radio" name="radio1" id="radio-1" value="radio-1" class = "radio"/>
+				<label for="radio-1">radio–1</label>
+			</div>
+				<div class = "row">
+
+				<input type="radio" name="radio1" id="radio-1" value="radio-1" class = "radio"/>
+				<label for="radio-1">radio–1</label>
 </div>
+				
+				
+				<p> Can you vote in the upcoming election? </p>
+			</div>
+		<%end%>
+	</div>
+</div>	
+
+
+
+<%= flash[:danger] %>
+<%= flash[:success] %>
+
+<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
+		<p> Choose the candidate you would vote in TAMILNADU Elections-2017</p>
+			<%= f.radio_button :choice, 'kamal', class: "radio"%>
+			<%= f.radio_button :choice, 'rajini', class: "radio"%>RajiniKanth<br/>
+			<%= f.radio_button :choice, 'dmk', , class: "radio"%> DMK <br/>
+			<%= f.radio_button :choice, 'aiadmk', class: "radio"%> AIADMK <br/>
+			<%= f.radio_button :choice, 'pmk', class: "radio"%> PMK <br/>
+			<%= f.radio_button :choice, 'dmdk', class: "radio"%> DMDK <br/>
+			<%= f.radio_button :choice, 'other',class: "radio"%> Others <br/>
+			<p> Can you vote in the upcoming election? </p>
+		<%= f.radio_button :voter, 'adult'%> Voter<br/>
+		<%= f.radio_button :voter, 'child'%> Non-Voter<br/>
+		<p> Enter you email id</p>
+		<%= f.email_field :email%>
+	 <%= f.submit%>
+<% end %>
+
+
+<%= f.radio_button :choice, 'kamal', class: "radio"%>Kamal Hassan
+				<%= f.radio_button :choice, 'rajini', class: "radio"%>RajiniKanth
+				<%= f.radio_button :choice, 'dmk', class: "radio"%> DMK 
+				<%= f.radio_button :choice, 'aiadmk', class: "radio"%> AIADMK
+				<%= f.radio_button :choice, 'pmk', class: "radio"%> PMK 
+				<%= f.radio_button :choice, 'dmdk', class: "radio"%> DMDK 
+				<%= f.radio_button :choice, 'other',class: "radio"%> Others 
+
+
+	
