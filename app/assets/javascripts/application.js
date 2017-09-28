@@ -46,7 +46,7 @@ $(document).ready(function(){
 						$("#countdown").countdown(myDate, function (event) {
 								$(this).html(
 									event.strftime(
-									'<div class="timer-wrapper"><div class="time">%D</div><span class="text">DAYS </span></div><div class="timer-wrapper"><div class="time">%H</div><span class="text">HRS </span></div><div class="timer-wrapper"><div class="time">%M </div><span class="text">MINS </span></div><div class="timer-wrapper"><div class="time">%S</div><span class="text">SEC </span></div>'
+									'<div class="timer-wrapper"><div class="time">%D </div><span class="text">DAYS </span></div><div class="timer-wrapper"><div class="time">%H&nbsp;</div><span class="text">HRS </span></div><div class="timer-wrapper"><div class="time">%M&nbsp; </div><span class="text">MINS </span></div><div class="timer-wrapper seconds"><div class="time">%S&nbsp;</div><span class="text">SEC </span></div>'
 									)
 								);
 							});

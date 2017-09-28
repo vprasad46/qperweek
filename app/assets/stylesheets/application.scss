@@ -30,17 +30,19 @@ body{
     font-size: 70px;
     color: #fff;
     font-family: 'Concert One', serif;
-    padding-left: 20px;
+    padding-left: 10px;
+    text-align: left;
 }
 .sub-title, .text {
     font-size: 30px;
     margin-top: 20px;
     color: #fff;
     font-family: 'Ruda', serif;
-    padding-left: 20px;
+    padding-left: 10px;
+    text-align: left;
+    margin-right: 24px;
 }
 .timer {
-  padding: 10px;
   text-align: center;
   padding-top: 15px;
 }
@@ -53,7 +55,7 @@ body{
 
 .timer .timer-wrapper .time {
   font-weight: bold;
-  font-size: 70px;
+  font-size: 40px;
   color: #fff;
   font-family: 'Ruda', serif;
 }
@@ -61,20 +63,22 @@ body{
 .timer .timer-wrapper .text {
   font-size: 30px;
   color: rgba(255, 255, 255, 0.6);
+  margin-left: 10px;
   font-family: 'Ruda', serif;
 }
+
 .left-div {
     text-align: left;
-    margin-top: 175px;
     border-right: 2px solid white;  
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .left-div {
-    text-align: left;
-    margin-top: 175px;
-     border-right: 0px solid white;
+    text-align: center;
+    border-right: 0px solid white;
+    margin-left: -25px;
   }
 }
+  
 .question-space{
   font-size: 30px;
   color: rgba(255, 255, 255, 0.6);
@@ -87,3 +91,41 @@ body{
   font-weight: bold;
 }
 
+@media screen and (max-width: 302px) {
+  .main-div{
+    margin-top: 30px;
+  }
+}
+
+@media (min-width:303px ) and (max-width: 991px) {
+  .main-div{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width:992px){
+  .main-div{
+    margin-top: 100px;
+  }
+} 
+
+@media (min-width:360px ) and (max-width: 435px) {
+  .timer {
+    text-align: center;
+    padding-top: 15px;
+    margin-left: -30px;
+    margin-right: -60px;
+  }
+}
+
+@media (min-width:320px ) and (max-width: 359px) {
+  .timer {
+    text-align: center;
+    font-size: 15px;
+    margin-left: -40px;
+    margin-right: -60px;
+  }
+  .title{
+    margin-left: -5px;
+  }
+}
