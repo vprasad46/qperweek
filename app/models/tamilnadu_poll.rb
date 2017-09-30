@@ -13,7 +13,7 @@
 
 class TamilnaduPoll < ApplicationRecord
 
-	enum choice: [:aiadmk,:rajini,:kamal,:dmk,:pmk,:dmdk,:other]
+	enum choice: [:aiadmk,:rajini,:kamal,:dmk,:pmk,:dmdk,:other,:bjp,:congress]
 	enum voter: [:adult,:child]
 
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

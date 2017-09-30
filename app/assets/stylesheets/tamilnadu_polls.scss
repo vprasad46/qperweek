@@ -1,3 +1,115 @@
-// Place all the styles related to the tamilnadu_polls controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.question-space{
+	margin-top: 25px;	
+}
+
+.options-space{
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.6);  
+  font-family: 'Ruda', serif;
+  width: 100%;
+}
+
+.options{
+  text-align: center;
+  padding-left: 10px;
+}
+.option{
+	text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .options-space{
+	  font-size: 25px;
+	  color: rgba(255, 255, 255, 0.6);
+	  font-family: 'Ruda', serif;
+	  width: 100%;
+	  text-align:center;
+	}
+}
+.col-xs-6{
+	font-size: 20px;
+}
+.submit-section{
+	margin-left: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.submit-button{
+  margin-bottom: 10px;
+}
+span.text-field {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Ruda', serif;
+    width: 100%;
+}
+:focus{
+  outline:none;
+}
+.radio{
+  -webkit-appearance:button;
+  -moz-appearance:button;
+  appearance:button;
+  border:4px solid #ccc;
+  border-top-color:#bbb;
+  border-left-color:#bbb;
+  background:#fff;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+}
+.radio:checked{
+  border:20px solid #4099ff;
+}

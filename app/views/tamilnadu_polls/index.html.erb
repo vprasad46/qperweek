@@ -11,10 +11,82 @@
 	<div class = "col-md-6 right-div">
 		<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
 			<div class = "question-space">
-				<!-- <p>Who would you vote for in the Upcoming Election?</p>
-				
-				<p> Can you vote in the upcoming election? </p> -->
+				<p> Who would you vote for in the upcoming election? </p>
+			</div>
+			<div class = "options-space">
+				<div class="options col-md-6 col-xs-6">
+					<div class = "option">
+					<label for="kamal">
+						<%= f.radio_button :choice, 'kamal', class:"radio" , id: 'kamal',checked: true%>
+						 KamalHassan</label>
+					 </div>
+					<div class = "option">
+						<label for="rajini">
+						<%= f.radio_button :choice, 'rajini', class:"radio",id: 'rajini'%>
+						 RajiniKanth</label>
+					 </div>
+				</div>
+				<div class="options col-md-6 col-xs-6">
+					<div class = "option">			
+						<label for="aiadmk">
+						<%= f.radio_button :choice, 'aiadmk', class:"radio" , id: 'aiadmk'%>
+						 AIADMK</label>
+					 </div>
+					<div class = "option">			
+						<label for="dmk">
+						<%= f.radio_button :choice, 'dmk', class:"radio",id: 'dmk'%>
+						 DMK</label>
+					 </div>
+				</div>
+				<div class="options col-md-6 col-xs-6">
+					<div class = "option">			
+						<label for="pmk">
+						<%= f.radio_button :choice, 'pmk', class:"radio" , id: 'pmk'%>
+						 PMK</label>
+					 </div>
+					<div class = "option">			
+						<label for="dmdk">
+						<%= f.radio_button :choice, 'dmdk', class:"radio",id: 'dmdk'%>
+						 DMDK</label>
+					 </div>
+				</div>
+				<div class="options col-md-6 col-xs-6">
+					<div class = "option">			
+						<label for="bjp">
+						<%= f.radio_button :choice, 'bjp', class:"radio" , id: 'bjp'%>
+						 BJP</label>
+					 </div>
+					<div class = "option">			
+						<label for="congress">
+						<%= f.radio_button :choice, 'congress', class:"radio",id: 'congress'%>
+						 Congress</label>
+					 </div>
+				</div>
+				<div class="options col-md-12 col-xs-6">
+					<div class = "option">			
+						<label for="other">
+						<%= f.radio_button :choice, 'other', class:"radio" , id: 'other'%>
+						 Others</label>
+					 </div>
+					
+				</div>
+			</div>
+			<div class = "submit-section">
+				<div class="form-group">
+					<%=f.email_field :email, class:"form-control",placeholder: "Email (required)" , required: true%>
+				</div>
+				<div><span class = "text-field">Can you vote?</span></div>
+				<label class="switch">
+					<%= f.check_box :voter, {class: ""}, "adult", "child" %> Are you a voter?
+					<span class="slider round"></span>		
+				</label>
+				<div class = "submit-button">
+					<%= button_tag(type: 'submit', class: "btn btn-success submit-button", style: "font-family: 'Ruda', serif; font-size: 20px;" , required: true) do %>
+						<span class="glyphicon glyphicon glyphicon-ok">&nbsp;Save</span>
+					<% end %>
+				</div>
 			</div>
 		<%end%>
 	</div>
-</div>	
+</div>
+
