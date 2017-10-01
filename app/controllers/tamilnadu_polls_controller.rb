@@ -24,11 +24,6 @@ class TamilnaduPollsController < ApplicationController
 	end
 
 	def chart
-		ip = request.env['REMOTE_ADDR'] 
-		if TamilnaduPoll.find_by(ip: ip).nil? then
-			flash[:danger] = "Answer the poll first"
-			redirect_to(tamilnadu_polls_index_path)
-		end
 	end
 
 	private 
