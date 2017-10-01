@@ -1,3 +1,9 @@
+<% if flash[:success].present? %>
+		<div class="alert alert-success alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<%= flash[:success]%>
+		</div>
+	<% end %>
 <div class = "chart-container ">
 	<div class = "count"><p>Total no of Votes: <%=TamilnaduPoll.all.count%></p></div>
 	<div id = "no-of-votes" class = "col-md-6 col-sm-6 col-xs-12 well"><span class="label label-primary">No of Voters above and below 18</span><%= bar_chart TamilnaduPoll.group(:voter).count %></div>
