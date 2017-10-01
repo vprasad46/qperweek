@@ -23,6 +23,10 @@ class TamilnaduPollsController < ApplicationController
 		render json:{deadline: deadline}
 	end
 
+	def chart
+		 	
+	end
+
 	private 
 	def create_params
 		params.require(:tamilnadu_poll).permit(:choice,:email,:voter)

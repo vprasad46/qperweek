@@ -1,17 +1,4 @@
-<div class = "header">
-		<div class = "title class-md-12">
-			<%= image_tag("logo.png", class:"img-responsive")%>
-		</div>
-		<div class = "sub-title class-md-12">
-			<i>"Know answers to the unknown..! Voice your opinion..!"</i>
-			<div class = "share">
-				<a href="whatsapp://send?text=Tamilnadu Virtual Elections..! Check it out ! http://qperweek.herokuapp.com" data-action="share/whatsapp/share"><%= image_tag("whatsapp.png", class:"share-logo")%></a>
-				<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fqperweek.herokuapp.com&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<a onclick="window.open('https://twitter.com/intent/tweet?text=Tamilnadu Virtual Elections..! Check it out ! http://qperweek.herokuapp.com', 'newwindow', 'width=700, height=700'); return false;">
-				<%= image_tag("twitter.png", class:"share-logo")%></a>
-			</div>	
-	  </div>
-</div>
+
 <div class = "container main-div">
 	<% if flash[:success].present? %>
 		<div class="alert alert-success alert-dismissable fade in">
@@ -116,5 +103,4 @@
 		<%end%>
 	</div>
 </div>
-
 

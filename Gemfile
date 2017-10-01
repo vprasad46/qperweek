@@ -18,6 +18,7 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails_12factor'
+gem "chartkick"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
