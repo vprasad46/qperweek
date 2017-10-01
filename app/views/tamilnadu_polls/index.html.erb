@@ -1,7 +1,15 @@
 <div class = "header">
-		<div class = "title class-md-12">QPERWEEK</div>
+		<div class = "title class-md-12">
+			<%= image_tag("logo.png", class:"img-responsive")%>
+		</div>
 		<div class = "sub-title class-md-12">
 			<i>"Know answers to the unknown..! Voice your opinion..!"</i>
+			<div class = "share">
+				<a href="whatsapp://send?text=Tamilnadu Virtual Elections..! Check it out ! http://qperweek.herokuapp.com" data-action="share/whatsapp/share"><%= image_tag("whatsapp.png", class:"share-logo")%></a>
+				<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fqperweek.herokuapp.com&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<a onclick="window.open('https://twitter.com/intent/tweet?text=Tamilnadu Virtual Elections..! Check it out ! http://qperweek.herokuapp.com', 'newwindow', 'width=700, height=700'); return false;">
+				<%= image_tag("twitter.png", class:"share-logo")%></a>
+			</div>	
 	  </div>
 </div>
 <div class = "container main-div">
@@ -19,16 +27,13 @@
 				<%= flash[:danger]%>
 			<% else %>
 				<% flash[:danger].each do |error| %>
-					<%=  error %>
+					<%=error %><br/>
 				<% end %>			
 			<% end %>
 		</div>
 	<% end %>
 	<div class = "col-md-6 left-div">
 		<div class = "timer" id="countdown"></div>
-		<div class = "sharing">
-			<a href="whatsapp://send?text=Tamilnadu Virtual Elections..! Check it out !" data-action="share/whatsapp/share">Share via Whatsapp</a>
-		</div>		
 	</div>
 	<div class = "col-md-6 right-div">
 		<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
@@ -99,7 +104,7 @@
 				</div>
 				<div><span class = "text-field">Click the button below if you are 18 or above!</span></div>
 				<label class="switch">
-					<%= f.check_box :voter, {class: ""}, "adult", "child" %> Are you a voter?
+					<%= f.check_box :voter, {class: ""}, "adult", "child" %>
 					<span class="slider round"></span>		
 				</label>
 				<div class = "submit-button">
@@ -111,4 +116,5 @@
 		<%end%>
 	</div>
 </div>
+
 

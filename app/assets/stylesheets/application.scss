@@ -34,7 +34,7 @@ body{
 }
 .sub-title, .text {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: -10px;
     color: #fff;
     font-family: 'Ruda', serif;
     padding-left: 10px;
@@ -77,13 +77,25 @@ body{
     margin-right: -15px;
   }
 }
+@media screen and (min-width: 768px) {
+  .title{
+    width: 50%;
+    margin: -50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .title{
+    width: 50%;
+    margin: -75px
+  }
+}
   
 .question-space{
   font-size: 30px;
   color: rgba(255, 255, 255, 0.6);
   font-family: 'Ruda', serif;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .question-space p{
@@ -103,7 +115,7 @@ body{
 }
 @media (min-width:321px ) and (max-width: 991px) {
   .main-div{
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: -25px;
   }
   .right-div{
@@ -113,7 +125,7 @@ body{
 
 @media screen and (min-width:992px){
   .main-div{
-    margin-top: 70px;
+    margin-top: 50px;
     margin-left: -12px;
   }
 } 
@@ -127,6 +139,11 @@ body{
   }
 }
 
+body {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
 @media (min-width:320px ) and (max-width: 359px) {
   .timer {
     text-align: center;
@@ -137,4 +154,10 @@ body{
   .title{
     margin-left: -5px;
   }
+}
+.share a img{
+  width:50px;
+  height:50px;
+  text-align:center;
+  margin:5px;
 }
