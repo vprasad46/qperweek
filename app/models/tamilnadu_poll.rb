@@ -30,7 +30,7 @@ class TamilnaduPoll < ApplicationRecord
 	def ip_used_three_times?
 		a = TamilnaduPoll.where(ip: self.ip)
 		if a.count == 4 then
-			self.errors.add(:ip, "Ip used three times")
+			self.errors.add(:ip, "used more than three times.!")
 		end
 	end
 end

@@ -5,8 +5,30 @@
 	  </div>
 </div>
 <div class = "container main-div">
+	<% if flash[:success].present? %>
+		<div class="alert alert-success alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<%= flash[:success]%>
+		</div>
+	<% end %>
+
+	<% if flash[:danger].present? %>
+		<div class="alert alert-danger alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<% unless flash[:danger].kind_of?(Array) %>
+				<%= flash[:danger]%>
+			<% else %>
+				<% flash[:danger].each do |error| %>
+					<%=  error %>
+				<% end %>			
+			<% end %>
+		</div>
+	<% end %>
 	<div class = "col-md-6 left-div">
-		<div class = "timer" id="countdown"></div>		
+		<div class = "timer" id="countdown"></div>
+		<div class = "sharing">
+			<a href="whatsapp://send?text=Tamilnadu Virtual Elections..! Check it out !" data-action="share/whatsapp/share">Share via Whatsapp</a>
+		</div>		
 	</div>
 	<div class = "col-md-6 right-div">
 		<%=form_for :tamilnadu_poll, url: tamilnadu_polls_submit_path do |f| %>
@@ -75,7 +97,7 @@
 				<div class="form-group">
 					<%=f.email_field :email, class:"form-control",placeholder: "Email (required)" , required: true%>
 				</div>
-				<div><span class = "text-field">Can you vote?</span></div>
+				<div><span class = "text-field">Click the button below if you are 18 or above!</span></div>
 				<label class="switch">
 					<%= f.check_box :voter, {class: ""}, "adult", "child" %> Are you a voter?
 					<span class="slider round"></span>		
